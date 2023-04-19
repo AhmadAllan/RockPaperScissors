@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    
+    <!-- popup modal -->
+    <div class="modal"  id="modal">
+        <div class="modal-header">
+            <div class="title">Rules of the game</div>
+        </div>
+        <div class="modal-body">
+            <p id="text">
+
+            </p>
+
+            <div id="buttons">
+                <button id="play">OK</button>
+                <button id="close">close</button>
+            </div>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <!--game-->
+    <h1>rock, paper or scissor</h1>
+    <div class="grid-container">
+        <div id="display" class="grid-items">
+            <div id="player-section" >
+                <p>Player</p>
+                <img src="" alt="player choice" id="player">
+            </div>
+            <h1 id="vs">VS</h1>
+            <div id="computer-section" class="computer-section">
+                <p>computer</p>
+                <img src="" alt="computer choice" id="computer">
+            </div>
+        </div>
+        
+        <div id="button">
+            <button class="btn" onclick="getPlayerChoice()" value="rock">✊</button>
+            <button class="btn" onclick="getPlayerChoice()" value="paper">✋</button>
+            <button class="btn" onclick="getPlayerChoice()" value="scissor">✌️</button>
+        </div>
+
+        <div id="score">
+            <p>Player Score: <span id="player-score"> 0</span></p>
+            <p>|</p>
+            <p>Computer Score:  <span id="computer-score"> 0</span></p>
+        </div>
+    </div>
+    <script src="./scripts/index.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,116 @@
+body {
+    background-color: #0c4a6e;
+    color: white;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+    color: black;
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 15px;
+}
+
+.modal-body #buttons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.modal-body > * {
+    margin-left: 10px;
+}
+
+#buttons > * {
+    padding: 10px 20px;
+    font-size: 1.23rem;
+    font-weight: bold;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/*game style*/
+h1{
+    text-align: center;
+}
+.grid-items {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    justify-items: center;
+}
+
+img {
+    width: 60%;
+    padding: 20px;
+    text-align: center;
+}
+
+#vs{
+    place-self: center;
+}
+#player-section, #computer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+#button {
+    display: flex;
+    justify-content: space-around;
+}
+
+#button > * {
+    width: 150px;
+    height: 50px;
+    font-size: 2rem;
+}
+
+/* Score */
+#score {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
